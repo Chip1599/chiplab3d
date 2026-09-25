@@ -18,6 +18,7 @@
   color-scheme: light;
   --bg:#f4f4f1; --surface:#ffffff; --surface-2:#f8f8f6; --surface-3:#ecebe7;
   --border:rgba(11,11,11,.10); --border-strong:rgba(11,11,11,.18);
+  --control:#ffffff; --control-hover:#ecebe7; --control-border:rgba(11,11,11,.20);
   --text:#0b0b0b; --text-2:#52514e; --muted:#6f6e69;
   --accent:#c8102e; --accent-hover:#a50d26; --accent-soft:rgba(200,16,46,.09); --on-accent:#ffffff;
   --grid:#e1e0d9; --axis:#c3c2b7; --hover:rgba(11,11,11,.04);
@@ -33,6 +34,7 @@
   color-scheme: dark;
   --bg:#232427; --surface:#2d2e32; --surface-2:#34353a; --surface-3:#3e3f45;
   --border:rgba(255,255,255,.10); --border-strong:rgba(255,255,255,.18);
+  --control:#3b3c42; --control-hover:#47484f; --control-border:rgba(255,255,255,.16);
   --text:#ffffff; --text-2:#c3c2b7; --muted:#9a9891;
   --accent:#e8323f; --accent-hover:#f25561; --accent-soft:rgba(232,50,63,.16);
   --grid:#3e3f45; --axis:#4d4e55; --hover:rgba(255,255,255,.05);
@@ -87,8 +89,8 @@ main{padding:28px 32px 64px;min-width:0}
 .head-actions{display:flex;gap:8px;flex-wrap:wrap}
 
 /* ---------- controles ---------- */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:8px 14px;border-radius:8px;border:1px solid var(--border-strong);background:var(--surface);cursor:pointer;font-weight:500;white-space:nowrap;text-decoration:none;color:var(--text)}
-.btn:hover{background:var(--surface-3)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:8px 14px;border-radius:8px;border:1px solid var(--control-border);background:var(--control);cursor:pointer;font-weight:500;white-space:nowrap;text-decoration:none;color:var(--text)}
+.btn:hover{background:var(--control-hover)}
 .btn .ic{width:16px;height:16px}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
 .btn.primary:hover{background:var(--accent-hover);border-color:var(--accent-hover)}
@@ -98,7 +100,7 @@ main{padding:28px 32px 64px;min-width:0}
 .btn.ghost:hover{background:var(--surface-3)}
 .btn.icon{padding:6px}
 .btn:focus-visible,.chip:focus-visible,.nav button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
-.in{width:100%;padding:8px 10px;border:1px solid var(--border-strong);border-radius:8px;background:var(--surface);min-width:0}
+.in{width:100%;padding:8px 10px;border:1px solid var(--control-border);border-radius:8px;background:var(--control);min-width:0}
 .in:focus{outline:2px solid var(--accent);outline-offset:-1px;border-color:transparent}
 select.in{cursor:pointer}
 .in.auto{width:auto}
@@ -116,8 +118,8 @@ textarea.in{resize:vertical}
 .check{display:flex;gap:8px;align-items:center;font-size:13px;color:var(--text-2);cursor:pointer}
 .check input{width:16px;height:16px;accent-color:var(--accent)}
 .chips{display:flex;gap:6px;flex-wrap:wrap}
-.chip{padding:6px 12px;border-radius:99px;border:1px solid var(--border-strong);background:var(--surface);cursor:pointer;font-size:13px;display:inline-flex;gap:6px;align-items:center}
-.chip:hover{background:var(--surface-3)}
+.chip{padding:6px 12px;border-radius:99px;border:1px solid var(--control-border);background:var(--control);cursor:pointer;font-size:13px;display:inline-flex;gap:6px;align-items:center}
+.chip:hover{background:var(--control-hover)}
 .chip .c{font-size:11.5px;color:var(--muted)}
 .chip.on{background:var(--text);color:var(--bg);border-color:var(--text)}
 .chip.on .c{color:inherit;opacity:.7}
@@ -170,7 +172,7 @@ td.acts{text-align:right;white-space:nowrap}
 .badge.good{background:var(--good-soft);color:var(--good-text)}
 .badge.warn{background:var(--warn-soft);color:var(--warn-text)}
 .badge.crit{background:var(--crit-soft);color:var(--crit-text)}
-.st-sel{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--border);border-radius:99px;padding:2px 4px 2px 10px;background:var(--surface)}
+.st-sel{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--control-border);border-radius:99px;padding:2px 4px 2px 10px;background:var(--control)}
 .st-sel i{width:8px;height:8px;border-radius:50%;flex:none}
 .st-sel select{border:0;background:transparent;padding:2px 2px;cursor:pointer;font-size:13px;outline:none}
 /* lista aberta do select: sem isso o tema escuro mostra texto branco em fundo branco */
